@@ -1,165 +1,261 @@
-@color: #ff6700;
-
-@font-face {
-    font-family: 'iconfont';
-    src: url('font/iconfont.eot');
-    src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
-        url('font/iconfont.woff') format('woff'),
-        url('font/iconfont.ttf') format('truetype'),
-        url('font/iconfont.svg#iconfont') format('svg');
-}
-
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 0.375rem;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.site-topbar {
-    background-color: #333;
-    color: #b0b0b0;
-    font-style: 0.75rem;
-    height: 2.5rem;
-}
-
-.container {
-    width: 76.625rem;
-    height: inherit;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.topbar-nav {
-    height: inherit;
-    float: left;
-    overflow: hidden;
-    line-height: 2.5rem;
-}
-
-.topbar-info {
-    height: inherit;
-    float: right;
-    overflow: hidden;
-    line-height: 2.5rem;
-}
-
-.topbar-nav a,
-.topbar-info a {
-    font-size: 0.75rem;
-    color: #B0B0B0;
-    text-decoration: none;
-    float: left;
-}
-
-.topbar-nav a:hover,
-.topbar-info a:hover {
-    color: #FFFFFF;
-}
-
-.topbar-nav .step {
-    float: left;
-    font-size: 0.75rem;
-    color: #424242;
-    margin-left: 0.375rem;
-    margin-right: 0.375rem;
-}
-
-.topbar-info .step {
-    float: left;
-    font-size: 0.75rem;
-    color: #424242;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-}
-
-.topbar-cart {
-    height: inherit;
-    width: 7.5rem;
-    float: right;
-    margin-left: 1rem;
-}
-
-.topbar-cart a {
-    height: inherit;
-    width: inherit;
-    font-size: 0.75rem;
-    background-color: #424242;
-    display: block;
-    text-decoration: none;
-    line-height: 2.5rem;
-    color: #B0B0B0;
-    text-align: center;
-    position: relative;
-    z-index: 100;
-}   
-.topbar-cart .cart{
-    font-size: 1.25rem;
-    margin-right: 0.25rem;
-}
-.topbar-cart .cart-menu{
-    width: 19.75rem;
-    height: 6.125rem;
-    display: none;
-    float: right;
-    color: #424242;
-    text-align: center;
-    line-height: 6.125rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15) ;
-}
-.site-header{
-    height: 6.25rem;
-    .header-logo{
-        float: left;
-        width: 3.4375rem;
-        height: 3.4375rem;
-        margin-top: 1.375rem;
-        margin-right: 0.4375rem;
-        .logo{
-            display: block;
-            width: inherit;
-            height: inherit;
-            background-color: @color;
-            background-image: url(img/mi-logo.png);
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-        }
+    @color: #ff6700;
+    @border-common:solid 1/16rem #e0e0e0;
+    @font-face {
+        font-family: 'iconfont';
+        src: url('font/iconfont.eot');
+        src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), url('font/iconfont.woff') format('woff'), url('font/iconfont.ttf') format('truetype'), url('font/iconfont.svg#iconfont') format('svg');
     }
-    .header-nav{
-        float: left;
+    
+    .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 0.375rem;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .site-topbar {
+        background-color: #333;
+        color: #b0b0b0;
+        font-style: 0.75rem;
+        height: 2.5rem;
+    }
+    
+    .container {
+        width: 76.625rem;
         height: inherit;
-        .nav-list{
-            width: 51.25rem;
-            padding-left: 1.875rem;
-            list-style-type: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .topbar-nav {
+        height: inherit;
+        float: left;
+        overflow: hidden;
+        line-height: 2.5rem;
+    }
+    
+    .topbar-info {
+        height: inherit;
+        float: right;
+        overflow: hidden;
+        line-height: 2.5rem;
+    }
+    
+    .topbar-nav a,
+    .topbar-info a {
+        font-size: 0.75rem;
+        color: #B0B0B0;
+        text-decoration: none;
+        float: left;
+    }
+    
+    .topbar-nav a:hover,
+    .topbar-info a:hover {
+        color: #FFFFFF;
+    }
+    
+    .topbar-nav .step {
+        float: left;
+        font-size: 0.75rem;
+        color: #424242;
+        margin-left: 0.375rem;
+        margin-right: 0.375rem;
+    }
+    
+    .topbar-info .step {
+        float: left;
+        font-size: 0.75rem;
+        color: #424242;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+    
+    .topbar-cart {
+        height: inherit;
+        width: 7.5rem;
+        float: right;
+        margin-left: 1rem;
+    }
+    
+    .topbar-cart a {
+        height: inherit;
+        width: inherit;
+        font-size: 0.75rem;
+        background-color: #424242;
+        display: block;
+        text-decoration: none;
+        line-height: 2.5rem;
+        color: #B0B0B0;
+        text-align: center;
+        position: relative;
+        z-index: 101;/*置于购物车弹出窗上面*/
+    }
+    
+    .topbar-cart .cart {
+        font-size: 1.25rem;
+        margin-right: 0.25rem;
+    }
+    
+    .topbar-cart .cart-menu {
+        width: 19.75rem;
+        height: 6.125rem;
+        display: none;
+        float: right;
+        color: #424242;
+        text-align: center;
+        line-height: 6.125rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 100;
+        background-color: #FFFFFF;
+    }
+    
+    .site-header {
+        height: 6.25rem;
+        .header-logo {
             float: left;
-            color: #333;
-            font-size: 1rem;
-            padding-top: 0.75rem;
-            height: 5.5rem; 
-            margin-top: 0;
-            margin-bottom: 0;  
-            li{
-                float: left;
+            width: 3.4375rem;
+            height: 3.4375rem;
+            margin-top: 1.375rem;
+            margin-right: 0.4375rem;
+            .logo {
+                display: block;
+                width: inherit;
                 height: inherit;
-                line-height: 4.75rem;
-                a{
-                    text-decoration: none;
-                    color: #333;
-                    padding-left: 0.625rem;
-                    padding-right: 0.625rem;
+                background-color: @color;
+                background-image: url(img/mi-logo.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+        }
+        .header-nav {
+            float: left;
+            height: inherit;
+            .nav-list {
+                width: 51.25rem;
+                padding-left: 1.875rem;
+                list-style-type: none;
+                float: left;
+                color: #333;
+                font-size: 1rem;
+                padding-top: 0.75rem;
+                height: 5.5rem;
+                margin-top: 0;
+                margin-bottom: 0;
+                li {
+                    float: left;
+                    height: inherit;
+                    line-height: 4.75rem;
+                    a {
+                        text-decoration: none;
+                        color: #333;
+                        padding-left: 0.625rem;
+                        padding-right: 0.625rem;
+                    }
+                }
+                .nav-category {
+                    width: 7.9375rem;
+                    padding-right: 0.9375rem;
                 }
             }
-            .nav-category{
-                width: 7.9375rem;
-                padding-right: 0.9375rem;
+        }
+        .header-search {
+            @border: 1px #e0e0e0 solid;
+            position: relative;
+            float: right;
+            margin-top: 1.5625rem;
+            .search-btn {
+                float: right;
+                width: 3.25rem;
+                height: 3.125rem;
+                border: @border;
+                background-color: #fff;
+                color: #616161;
+                font-size: 0.875rem;
+            }
+            .search-text {
+                float: right;
+                height: 3.125rem;
+                padding-top: 0;
+                padding-bottom: 0;
+                width: 15.3125rem;
+                padding-left: 0.625rem;
+                padding-right: 0.625rem;
+                border-top: @border;
+                border-left: @border;
+                border-bottom: @border;
+                border-right: none;
+                font-size: 0.875rem;
+                color: #333;
+            }
+            .search-hot-words {
+                position: absolute;
+                right: 3.75rem;
+                top: 0.8125rem;
+                a {
+                    font-size: 0.75rem;
+                    color: #757575;
+                    background-color: #eee;
+                    text-decoration: none;
+                    padding-left: 0.3125rem;
+                    padding-right: 0.3125rem;
+                    padding-top: 0.125rem;
+                    padding-bottom: 0.125rem;
+                    margin-left: 0.3125rem;
+                    transition-property: all;
+                    transition-duration: 0.2;
+                    transition-timing-function: ease;
+                }
+                a:hover {
+                    background-color: @color;
+                    color: #FFFFFF;
+                }
+            }
+            .keyword-list {
+                position: absolute;
+                width: 244/16rem;
+                top: 50/16rem;
+                border-top: none;
+                border-left: solid 1/16rem @color;
+                border-bottom: solid 1/16rem @color;
+                border-right: solid 1/16rem @color;
+                display: none;
+                .result-list {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        line-height: 27/16rem;
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            font-size: 0.75rem;
+                            color: #424242;
+                            padding-left: 0.9375rem;
+                            padding-right: 0.9375;
+                            padding-top: 0.375;
+                            padding-bottom: 0.375;
+                            position: relative;
+                            .result {
+                                position: absolute;
+                                right: 0.9375rem;
+                                top: 0.375rem;
+                                color: #b0b0b0;
+                            }
+                        }
+                        &:hover{
+                            background-color: #f9f9f9;
+                        }
+                    }
+                }
             }
         }
+        .header-nav-menu{
+            height: 229/16rem;
+            border-top: @border-common;
+            display: none;
+            background-color: red;
+        }
     }
-    .header-search{
-        float: right;
-    }
-}
-
